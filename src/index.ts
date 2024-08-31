@@ -149,6 +149,8 @@ app.use("*", (req, res) => {
   sendErrorRes(res, "Not Found!", 404);
 });
 
-server.listen(8000, () => {
-  console.log("The app is running on http://localhost:8000");
+const PORT = process.env.PORT || 8000
+server.listen(PORT, () => {
+  console.log(`The app is running on ${PORT}`);
 });
+
